@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Tutorías - UNED (v4)</title>
+    <title>Gestor de Registros Locales</title>
     
     <!-- Bibliotecas de terceros vía CDN -->
     <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
@@ -15,7 +15,7 @@
 
 /* Variables CSS - Tema "Deep Emerald" (Sobrio, Oscuro y Premium) */
 :root {
-    /* Paleta UNED oscurecida (Tonos bosque profundo) */
+    /* Paleta oscurecida (Tonos bosque profundo) */
     --uned-dark: #042416;
     --uned-main: #0a4026;
     --uned-light: #105c38;
@@ -421,7 +421,7 @@ body.compact-view td { padding: 0.6rem 1rem; font-size: 0.85rem; }
 
     <div class="header">
         <div>
-            <h1>Gestión de Tutorías y Servicios - UNED</h1>
+            <h1>Gestión de Tutorías y Servicios</h1>
             <div style="font-size: 0.9rem; opacity: 0.9;">Visor seguro con privacidad de datos garantizada</div>
         </div>
         <!-- Botón oculto por defecto -->
@@ -580,7 +580,7 @@ body.compact-view td { padding: 0.6rem 1rem; font-size: 0.85rem; }
         };
 
         async function init() {
-            localforage.config({ name: 'GestorTutoriasUNED', storeName: 'registros_seguros' });
+            localforage.config({ name: 'GestorTutorias', storeName: 'registros_seguros' });
             bindEvents();
             await loadFromDB();
         }
